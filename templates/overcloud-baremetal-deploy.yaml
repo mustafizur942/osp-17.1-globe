@@ -1,0 +1,50 @@
+- name: Controller
+  count: 3
+  defaults:
+    networks:
+    - network: ctlplane
+      vif: true
+    - network: external
+      subnet: external_subnet
+    - network: internal_api
+      subnet: internal_api_subnet
+    - network: storage
+      subnet: storage_subnet
+    - network: storage_mgmt
+      subnet: storage_mgmt_subnet
+    - network: tenant
+      subnet: tenant_subnet
+    network_config:
+        template: /home/stack/templates/nic-config/single_nic_vlans.j2
+        default_route_network:
+        - external
+    profile: control
+  instances:
+  - hostname: overcloud-controller-0
+    name: overcloud-controller-001
+  - hostname: overcloud-controller-1
+    name: overcloud-controller-002
+  - hostname: overcloud-controller-2
+    name: overcloud-controller-003
+- name: Compute
+  count: 3
+  defaults:
+    networks:
+    - network: ctlplane
+      vif: true
+    - network: internal_api
+      subnet: internal_api_subnet
+    - network: tenant
+      subnet: tenant_subnet
+    - network: storage
+      subnet: storage_subnet
+    network_config:
+      template: /home/stack/templates/nic-config/single_nic_vlans.j2
+    profile: compute
+  instances:
+  - hostname: overcloud-novacompute-0
+    name: overcloud-compute-001
+  - hostname: overcloud-novacompute-1
+    name: overcloud-compute-002
+  - hostname: overcloud-novacompute-2
+    name: overcloud-compute-003

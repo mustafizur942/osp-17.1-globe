@@ -1,0 +1,168 @@
+parameter_defaults:
+  ComputeCount: 3
+  ComputeHostnameFormat: '%stackname%-novacompute-%index%'
+  ControllerCount: 3
+  ControllerHostnameFormat: '%stackname%-controller-%index%'
+  DeployedServerPortMap:
+    overcloud-controller-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.17.1.80
+    overcloud-controller-1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.17.1.94
+    overcloud-controller-2-ctlplane:
+      fixed_ips:
+      - ip_address: 172.17.1.123
+    overcloud-novacompute-0-ctlplane:
+      fixed_ips:
+      - ip_address: 172.17.1.104
+    overcloud-novacompute-1-ctlplane:
+      fixed_ips:
+      - ip_address: 172.17.1.136
+    overcloud-novacompute-2-ctlplane:
+      fixed_ips:
+      - ip_address: 172.17.1.145
+  HostnameMap:
+    overcloud-controller-0: overcloud-controller-0
+    overcloud-controller-1: overcloud-controller-1
+    overcloud-controller-2: overcloud-controller-2
+    overcloud-novacompute-0: overcloud-novacompute-0
+    overcloud-novacompute-1: overcloud-novacompute-1
+    overcloud-novacompute-2: overcloud-novacompute-2
+  NodePortMap:
+    overcloud-controller-0:
+      ctlplane:
+        ip_address: 172.17.1.80
+        ip_address_uri: 172.17.1.80
+        ip_subnet: 172.17.1.80/24
+      external:
+        ip_address: 172.17.101.83
+        ip_address_uri: 172.17.101.83
+        ip_subnet: 172.17.101.83/24
+      internal_api:
+        ip_address: 192.168.150.93
+        ip_address_uri: 192.168.150.93
+        ip_subnet: 192.168.150.93/24
+      storage:
+        ip_address: 192.168.50.119
+        ip_address_uri: 192.168.50.119
+        ip_subnet: 192.168.50.119/24
+      storage_mgmt:
+        ip_address: 192.168.100.160
+        ip_address_uri: 192.168.100.160
+        ip_subnet: 192.168.100.160/24
+      tenant:
+        ip_address: 192.168.200.168
+        ip_address_uri: 192.168.200.168
+        ip_subnet: 192.168.200.168/24
+    overcloud-controller-1:
+      ctlplane:
+        ip_address: 172.17.1.94
+        ip_address_uri: 172.17.1.94
+        ip_subnet: 172.17.1.94/24
+      external:
+        ip_address: 172.17.101.158
+        ip_address_uri: 172.17.101.158
+        ip_subnet: 172.17.101.158/24
+      internal_api:
+        ip_address: 192.168.150.240
+        ip_address_uri: 192.168.150.240
+        ip_subnet: 192.168.150.240/24
+      storage:
+        ip_address: 192.168.50.31
+        ip_address_uri: 192.168.50.31
+        ip_subnet: 192.168.50.31/24
+      storage_mgmt:
+        ip_address: 192.168.100.32
+        ip_address_uri: 192.168.100.32
+        ip_subnet: 192.168.100.32/24
+      tenant:
+        ip_address: 192.168.200.230
+        ip_address_uri: 192.168.200.230
+        ip_subnet: 192.168.200.230/24
+    overcloud-controller-2:
+      ctlplane:
+        ip_address: 172.17.1.123
+        ip_address_uri: 172.17.1.123
+        ip_subnet: 172.17.1.123/24
+      external:
+        ip_address: 172.17.101.174
+        ip_address_uri: 172.17.101.174
+        ip_subnet: 172.17.101.174/24
+      internal_api:
+        ip_address: 192.168.150.79
+        ip_address_uri: 192.168.150.79
+        ip_subnet: 192.168.150.79/24
+      storage:
+        ip_address: 192.168.50.55
+        ip_address_uri: 192.168.50.55
+        ip_subnet: 192.168.50.55/24
+      storage_mgmt:
+        ip_address: 192.168.100.54
+        ip_address_uri: 192.168.100.54
+        ip_subnet: 192.168.100.54/24
+      tenant:
+        ip_address: 192.168.200.135
+        ip_address_uri: 192.168.200.135
+        ip_subnet: 192.168.200.135/24
+    overcloud-novacompute-0:
+      ctlplane:
+        ip_address: 172.17.1.104
+        ip_address_uri: 172.17.1.104
+        ip_subnet: 172.17.1.104/24
+      internal_api:
+        ip_address: 192.168.150.214
+        ip_address_uri: 192.168.150.214
+        ip_subnet: 192.168.150.214/24
+      storage:
+        ip_address: 192.168.50.113
+        ip_address_uri: 192.168.50.113
+        ip_subnet: 192.168.50.113/24
+      tenant:
+        ip_address: 192.168.200.133
+        ip_address_uri: 192.168.200.133
+        ip_subnet: 192.168.200.133/24
+    overcloud-novacompute-1:
+      ctlplane:
+        ip_address: 172.17.1.136
+        ip_address_uri: 172.17.1.136
+        ip_subnet: 172.17.1.136/24
+      internal_api:
+        ip_address: 192.168.150.200
+        ip_address_uri: 192.168.150.200
+        ip_subnet: 192.168.150.200/24
+      storage:
+        ip_address: 192.168.50.104
+        ip_address_uri: 192.168.50.104
+        ip_subnet: 192.168.50.104/24
+      tenant:
+        ip_address: 192.168.200.109
+        ip_address_uri: 192.168.200.109
+        ip_subnet: 192.168.200.109/24
+    overcloud-novacompute-2:
+      ctlplane:
+        ip_address: 172.17.1.145
+        ip_address_uri: 172.17.1.145
+        ip_subnet: 172.17.1.145/24
+      internal_api:
+        ip_address: 192.168.150.163
+        ip_address_uri: 192.168.150.163
+        ip_subnet: 192.168.150.163/24
+      storage:
+        ip_address: 192.168.50.201
+        ip_address_uri: 192.168.50.201
+        ip_subnet: 192.168.50.201/24
+      tenant:
+        ip_address: 192.168.200.95
+        ip_address_uri: 192.168.200.95
+        ip_subnet: 192.168.200.95/24
+resource_registry:
+  OS::TripleO::Compute::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::Compute::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
+  OS::TripleO::Compute::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_tenant.yaml
+  OS::TripleO::Controller::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_external.yaml
+  OS::TripleO::Controller::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_internal_api.yaml
+  OS::TripleO::Controller::Ports::StorageMgmtPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage_mgmt.yaml
+  OS::TripleO::Controller::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_storage.yaml
+  OS::TripleO::Controller::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_tenant.yaml
+  OS::TripleO::DeployedServer::ControlPlanePort: /usr/share/openstack-tripleo-heat-templates/deployed-server/deployed-neutron-port.yaml

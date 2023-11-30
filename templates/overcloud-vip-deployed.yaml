@@ -1,0 +1,33 @@
+parameter_defaults:
+  ControlPlaneVipData:
+    fixed_ips:
+    - ip_address: 172.17.1.76
+    name: control_virtual_ip
+    network:
+      tags:
+      - 172.17.1.0/24
+    subnets:
+    - ip_version: 4
+  VipPortMap:
+    external:
+      ip_address: 172.17.101.146
+      ip_address_uri: 172.17.101.146
+      ip_subnet: 172.17.101.146/24
+    internal_api:
+      ip_address: 192.168.150.151
+      ip_address_uri: 192.168.150.151
+      ip_subnet: 192.168.150.151/24
+    storage:
+      ip_address: 192.168.50.136
+      ip_address_uri: 192.168.50.136
+      ip_subnet: 192.168.50.136/24
+    storage_mgmt:
+      ip_address: 192.168.100.96
+      ip_address_uri: 192.168.100.96
+      ip_subnet: 192.168.100.96/24
+resource_registry:
+  OS::TripleO::Network::Ports::ControlPlaneVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_ctlplane.yaml
+  OS::TripleO::Network::Ports::ExternalVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_external.yaml
+  OS::TripleO::Network::Ports::InternalApiVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_internal_api.yaml
+  OS::TripleO::Network::Ports::StorageMgmtVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_storage_mgmt.yaml
+  OS::TripleO::Network::Ports::StorageVipPort: /usr/share/openstack-tripleo-heat-templates/network/ports/deployed_vip_storage.yaml
