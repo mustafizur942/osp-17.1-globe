@@ -1,0 +1,113 @@
+
+  {
+    "nodes": [
+        {
+            "name": "overcloud-compute-001",
+            "ports": [
+                {
+                    "address": "52:54:00:96:0d:9a",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "cpu": "4",
+            "memory": "10240",
+            "disk": "80",
+            "arch": "x86_64",
+            "pm_type": "ipmi",
+            "pm_user": "admin",
+            "pm_port": "6007",
+            "pm_password": "password",
+            "pm_addr": "127.0.0.1"
+        },
+        {
+            "name": "overcloud-compute-002",
+            "ports": [
+                {
+                    "address": "52:54:00:71:d8:d9",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "cpu": "4",
+            "memory": "10240",
+            "disk": "80",
+            "arch": "x86_64",
+            "pm_type": "ipmi",
+            "pm_user": "admin",
+            "pm_port": "6008",
+            "pm_password": "password",
+            "pm_addr": "127.0.0.1"
+        },
+        {
+            "name": "overcloud-compute-003",
+            "ports": [
+                {
+                    "address": "52:54:00:e0:ee:38",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "cpu": "4",
+            "memory": "10240",
+            "disk": "80",
+            "arch": "x86_64",
+            "pm_type": "ipmi",
+            "pm_user": "admin",
+            "pm_port": "6009",
+            "pm_password": "password",
+            "pm_addr": "127.0.0.1"
+        },
+        {
+            "name": "overcloud-controller-001",
+            "ports": [
+                {
+                    "address": "52:54:00:ea:14:aa",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "cpu": "4",
+            "memory": "10240",
+            "disk": "80",
+            "arch": "x86_64",
+            "pm_type": "ipmi",
+            "pm_user": "admin",
+            "pm_port": "6006",
+            "pm_password": "password",
+            "pm_addr": "127.0.0.1"
+        },
+        {
+            "name": "overcloud-controller-002",
+            "ports": [
+                {
+                    "address": "52:54:00:71:bd:ab",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "cpu": "4",
+            "memory": "10240",
+            "disk": "80",
+            "arch": "x86_64",
+            "pm_type": "ipmi",
+            "pm_user": "admin",
+            "pm_port": "6005",
+            "pm_password": "password",
+            "pm_addr": "127.0.0.1"
+        },
+        {
+            "name": "overcloud-controller-003",
+            "ports": [
+                {
+                    "address": "52:54:00:78:11:75",
+                    "physical_network": "ctlplane"
+                }
+            ],
+            "cpu": "4",
+            "memory": "10240",
+            "disk": "80",
+            "arch": "x86_64",
+            "pm_type": "ipmi",
+            "pm_user": "admin",
+            "pm_port": "6004",
+            "pm_password": "password",
+            "pm_addr": "127.0.0.1"
+        }
+    ]
+}
